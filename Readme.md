@@ -6,7 +6,7 @@ A small addon to let you use `/way` commands without TomTom or any other addons.
 
 ## Installation
 
- Pinup is installed like pretty much every other World of Warcraft mod on the planet. Extract the contents of the zip file to World of Warcraft's AddOns folder, generally located in one of these locations:
+ Pinup is installed like every other World of Warcraft mod. Extract the contents of the zip file to World of Warcraft's AddOns folder, generally located in one of these places:
 
 * C:\Users\Public\Games\World of Warcraft\_retail_\Interface\AddOns
 * C:\Program Files\World of Warcraft\_retail_\Interface\AddOns
@@ -28,6 +28,15 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 * Send me a message on [Facebook](https://facebook.com/vgermods)
 * Leave a comment on CurseForge
 * Email vger at vgermods.com
+
+## Version history
+
+### Version 0.0.2
+
+### Version 0.0.1
+
+* First public test version of Pinup.
+* Special thanks to Gardios for the addon's name.
 
 ---
 by Vger-Azjol-Nerub—www.vgermods.com

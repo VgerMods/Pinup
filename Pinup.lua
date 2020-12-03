@@ -5,7 +5,7 @@
 
 ------------------------------------------------------------
 
-Pinup = { Version = 0.0001 }
+Pinup = { Version = 0.0002 }
 local _
 
 Pinup.SetPinAtSelf = function()
@@ -50,6 +50,7 @@ local function FindMapByName(MapName)
 			end
 			MapID = MapID + 1
 		end
+		print("Found roughly this many maps:", MapID - 10)
 	end
 
 	-- Once we have a table, it's a simple lookup.

@@ -1,6 +1,6 @@
 ﻿## Interface: 90002
 ## Title: Pinup
-## Version: 0.0.1
+## Version: 0.0.2
 ## Notes: Use /way without any other addons.
 
 Pinup.lua
