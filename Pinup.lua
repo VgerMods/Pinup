@@ -1,11 +1,11 @@
 ﻿-- Pinup by Vger-Azjol-Nerub
 -- www.vgermods.com
--- © 2020 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 license.
+-- © 2020-2021 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 license.
 -- See Readme.md for more information.
 
 ------------------------------------------------------------
 
-Pinup = { Version = 0.0002 }
+Pinup = { Version = 1.0000 }
 local _
 
 Pinup.SetPinAtSelf = function()
@@ -93,7 +93,7 @@ local function WayCommand(Command)
 			PrintUsage = true
 		end
 	end
-	if PrintUsage then print("Usage:\n  /way 24.8 26.2\n  /way Nazmir 42.8 26.2 Offering to Bwonsamdi") end
+	if PrintUsage then print("Usage:\n  /way 24.8 26.2\n  /way Nazmir 42.8 26.2") end
 end
 
 local function WayBackCommand(Command)

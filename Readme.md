@@ -31,7 +31,9 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 
 ## Version history
 
-### Version 0.0.2
+### Version 1.0.0
+
+* Updated for WoW 9.0.5.
 
 ### Version 0.0.1
 
@@ -41,4 +43,4 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 ---
 by Vger-Azjol-Nerub—www.vgermods.com
 
-© 2020 Travis Spomer.  This mod is released under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.
+© 2020-2021 Travis Spomer.  This mod is released under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.
