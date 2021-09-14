@@ -3,4 +3,6 @@
 ## Version: 1.0.0
 ## Notes: Use /way without any other addons.
 
+## X-Wago-ID: 9rN4kvGD
+
 Pinup.lua
