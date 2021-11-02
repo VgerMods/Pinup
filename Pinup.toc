@@ -1,6 +1,6 @@
-﻿## Interface: 90005
+﻿## Interface: 90105
 ## Title: Pinup
-## Version: 1.0.0
+## Version: 1.0.0 (for WoW 9.1.5)
 ## Notes: Use /way without any other addons.
 
 ## X-Wago-ID: 9rN4kvGD
