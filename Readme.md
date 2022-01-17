@@ -8,9 +8,9 @@ A small addon to let you use `/way` commands without TomTom or any other addons.
 
  Pinup is installed like every other World of Warcraft mod. Extract the contents of the zip file to World of Warcraft's AddOns folder, generally located in one of these places:
 
-* C:\Users\Public\Games\World of Warcraft\_retail_\Interface\AddOns
-* C:\Program Files\World of Warcraft\_retail_\Interface\AddOns
-* C:\Program Files (x86)\World of Warcraft\_retail_\Interface\AddOns
+* C:\Users\Public\Games\World of Warcraft\\\_retail_\Interface\AddOns
+* C:\Program Files\World of Warcraft\\\_retail_\Interface\AddOns
+* C:\Program Files (x86)\World of Warcraft\\\_retail_\Interface\AddOns
 
 ## Usage
 
@@ -31,6 +31,10 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 
 ## Version history
 
+### Version 1.0.1
+
+* Added support for European-style coordinates, such as `/way 24,8 26,2`.
+
 ### Version 1.0.0
 
 * Updated for WoW 9.0.5.
@@ -43,4 +47,4 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 ---
 by Vger-Azjol-Nerub—www.vgermods.com
 
-© 2020-2021 Travis Spomer.  This mod is released under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.
+© 2020-2022 Travis Spomer.  This mod is released under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.

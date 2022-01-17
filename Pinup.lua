@@ -63,6 +63,8 @@ local function WayCommand(Command)
 		PrintUsage = true
 	else
 		local XPos, YEndPos, XStr, YStr = strfind(Command, "([%d.,]+)%s+([%d.,]+)")
+		XStr = gsub(XStr, ",", ".") -- Don't combine this with tonumber(); gsub has multiple return values
+		YStr = gsub(YStr, ",", ".")
 		local x = tonumber(XStr)
 		local y = tonumber(YStr)
 		local MapName
