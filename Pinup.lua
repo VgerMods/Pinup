@@ -1,11 +1,11 @@
 ﻿-- Pinup by Vger-Azjol-Nerub
 -- www.vgermods.com
--- © 2020-2021 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 license.
+-- © 2020-2022 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 license.
 -- See Readme.md for more information.
 
 ------------------------------------------------------------
 
-Pinup = { Version = 1.0000 }
+Pinup = { Version = 1.0001 }
 local _
 
 Pinup.SetPinAtSelf = function()
