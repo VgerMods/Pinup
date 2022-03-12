@@ -5,7 +5,7 @@
 
 ------------------------------------------------------------
 
-Pinup = { Version = 1.0001 }
+Pinup = { Version = 1.0002 }
 local _
 
 Pinup.SetPinAtSelf = function()
@@ -24,6 +24,9 @@ Pinup.SetPin = function(MapID, x, y, Track)
 	print(C_Map.GetUserWaypointHyperlink())
 	if Track then C_SuperTrack.SetSuperTrackedUserWaypoint(true) end
 	return true
+
+	-- GetUserWaypointHyperlink can be bypassed entirely by manually crafting a "worldmap" link, in case you want to support a custom name:
+	-- https://wowpedia.fandom.com/wiki/Hyperlinks#worldmap
 end
 
 local UpperNamesToMapIDs
@@ -50,7 +53,7 @@ local function FindMapByName(MapName)
 			end
 			MapID = MapID + 1
 		end
-		print("Found roughly this many maps:", MapID - 10)
+		-- print("Found roughly this many maps:", MapID - 10)
 	end
 
 	-- Once we have a table, it's a simple lookup.
@@ -62,7 +65,26 @@ local function WayCommand(Command)
 	if Command == "" then
 		PrintUsage = true
 	else
-		local XPos, YEndPos, XStr, YStr = strfind(Command, "([%d.,]+)%s+([%d.,]+)")
+		local _
+		local MapID
+		-- Before doing any other parsing, check to see if they're trying to place a pin on a map by its map ID.
+		-- We handle that case first so that it doesn't get confused for an X-coordinate.
+		if strsub(Command, 1, 1) == "#" then
+			local IDPos, IDLength, IDStr, SpaceStr = strfind(Command, "^#(%d+)(%s+)")
+			if IDPos then
+				MapID = tonumber(IDStr)
+				if MapID then
+					Command = strsub(Command, 1 + strlen(IDStr) + strlen(SpaceStr) + 1)
+				end
+			end
+		end
+
+		local Pattern = "([%d.,]+)%s+([%d.,]+)"
+		if MapID then
+			-- If we already have a map ID from earlier, there can't be another map name specified.
+			Pattern = "^" .. Pattern
+		end
+		local XPos, YEndPos, XStr, YStr = strfind(Command, Pattern)
 		XStr = gsub(XStr, ",", ".") -- Don't combine this with tonumber(); gsub has multiple return values
 		YStr = gsub(YStr, ",", ".")
 		local x = tonumber(XStr)
@@ -72,9 +94,11 @@ local function WayCommand(Command)
 			MapName = strtrim(strsub(Command, 1, XPos - 1))
 			if strlen(MapName) == 0 then MapName = nil end
 		end
-		local MapID = C_Map.GetBestMapForUnit("player")
-		if MapName then
+		if MapID then
+			-- If we already found a map ID earlier, there's nothing to do here.
+		elseif MapName then
 			-- If they specified a zone name, and it's not the current zone, we need to look it up.
+			MapID = C_Map.GetBestMapForUnit("player")
 			local MapInfo = C_Map.GetMapInfo(MapID)
 			if strupper(MapInfo.name) ~= strupper(MapName) then
 				-- This is a different map, so look it up.
@@ -83,6 +107,9 @@ local function WayCommand(Command)
 					print("I couldn't find the map named \"" .. MapName .. "\" so I couldn't place a pin there.")
 				end
 			end
+		else
+			-- Otherwise, just use the map they're already on.
+			MapID = C_Map.GetBestMapForUnit("player")
 		end
 		if MapID ~= nil and x ~= nil and y ~= nil then
 			-- If they specified X and Y, they must be between 0 and 100. (The game APIs use 0-1.)
