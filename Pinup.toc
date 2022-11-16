@@ -1,4 +1,4 @@
-﻿## Interface: 100000
+﻿## Interface: 100002
 ## Title: Pinup
 ## Version: 1.0.2 (for WoW 10.0.0)
 ## Notes: Use /way without any other addons.
