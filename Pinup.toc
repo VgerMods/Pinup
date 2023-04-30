@@ -1,6 +1,6 @@
-﻿## Interface: 100007
+﻿## Interface: 100100
 ## Title: Pinup
-## Version: 1.0.2 (for WoW 10.0.7)
+## Version: 1.0.2
 ## Notes: Use /way without any other addons.
 
 ## X-Wago-ID: 9rN4kvGD
