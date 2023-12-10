@@ -7,11 +7,6 @@ on:
         description: 'Addon version'
         required: true
 
-env:
-  CLASSIC_VERSION: 11403
-  BURNING_CRUSADE_VERSION: 20504
-  WRATH_VERSION: 30400
-
 jobs:
   package:
     name: Create zips and tag
@@ -40,36 +35,6 @@ jobs:
         zip -9 -r ${{steps.init.outputs.tag_name}}.zip ${{steps.init.outputs.addon_name}}
         cd ..
 
-    - name: Replace TOC version for Classic
-      run: |
-        sed -i 's/Interface: *[0-9]\+/Interface: ${{env.CLASSIC_VERSION}}/g' .releases/${{steps.init.outputs.addon_name}}/${{steps.init.outputs.addon_name}}.toc
-
-    - name: Create Classic zip
-      run: |
-        cd .releases
-        zip -9 -r ${{steps.init.outputs.tag_name}}-Classic.zip ${{steps.init.outputs.addon_name}}
-        cd ..
-
-    - name: Replace TOC version for Burning Crusade
-      run: |
-        sed -i 's/Interface: *[0-9]\+/Interface: ${{env.BURNING_CRUSADE_VERSION}}/g' .releases/${{steps.init.outputs.addon_name}}/${{steps.init.outputs.addon_name}}.toc
-
-    - name: Create Burning Crusade zip
-      run: |
-        cd .releases
-        zip -9 -r ${{steps.init.outputs.tag_name}}-BurningCrusade.zip ${{steps.init.outputs.addon_name}}
-        cd ..
-
-    - name: Replace TOC version for Wrath
-      run: |
-        sed -i 's/Interface: *[0-9]\+/Interface: ${{env.WRATH_VERSION}}/g' .releases/${{steps.init.outputs.addon_name}}/${{steps.init.outputs.addon_name}}.toc
-
-    - name: Create Wrath zip
-      run: |
-        cd .releases
-        zip -9 -r ${{steps.init.outputs.tag_name}}-Wrath.zip ${{steps.init.outputs.addon_name}}
-        cd ..
-
     - name: Tag this version
       id: create_release
       uses: actions/create-release@v1
@@ -90,34 +55,4 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: .releases/${{steps.init.outputs.tag_name}}.zip
         asset_name: ${{steps.init.outputs.tag_name}}.zip
-        asset_content_type: application/zip
-
-    - name: Add Classic zip to release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: .releases/${{steps.init.outputs.tag_name}}-Classic.zip
-        asset_name: ${{steps.init.outputs.tag_name}}-Classic.zip
-        asset_content_type: application/zip
-
-    - name: Add Burning Crusade zip to release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: .releases/${{steps.init.outputs.tag_name}}-BurningCrusade.zip
-        asset_name: ${{steps.init.outputs.tag_name}}-BurningCrusade.zip
-        asset_content_type: application/zip
-
-    - name: Add Wrath zip to release
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: .releases/${{steps.init.outputs.tag_name}}-Wrath.zip
-        asset_name: ${{steps.init.outputs.tag_name}}-Wrath.zip
         asset_content_type: application/zip
