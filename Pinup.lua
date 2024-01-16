@@ -1,6 +1,6 @@
 ﻿-- Pinup by Vger-Azjol-Nerub
 -- www.vgermods.com
--- © 2020-2022 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 license.
+-- © 2020-2024 Travis Spomer.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 license.
 -- See Readme.md for more information.
 
 ------------------------------------------------------------
