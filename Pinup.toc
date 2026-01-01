@@ -1,4 +1,4 @@
-﻿## Interface: 110205
+﻿## Interface: 110207, 120000
 ## Title: Pinup
 ## Version: 1.0.2
 ## Notes: Use /way without any other addons.
