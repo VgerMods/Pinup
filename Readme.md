@@ -34,6 +34,10 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 
 ## Version history
 
+### Version 1.0.3
+
+* Improved how Pinup appears in your addons list.
+
 ### Version 1.0.2
 
 * Added support for specifying the map ID as a number as Wowhead does now: `/way #1970 67.4 25.1 Firim in Exile, Part 6`.

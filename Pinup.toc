@@ -1,6 +1,6 @@
 ﻿## Interface: 120000, 120001
 ## Title: Pinup
-## Version: 1.0.2
+## Version: 1.0.3
 ## Notes: Use /way without any other addons.
 
 ## IconTexture: Interface\AddOns\Pinup\Textures\MapPinIcon.tga

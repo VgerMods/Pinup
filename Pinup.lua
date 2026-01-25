@@ -5,7 +5,7 @@
 
 ------------------------------------------------------------
 
-Pinup = { Version = 1.0002 }
+Pinup = { Version = 1.0003 }
 local _
 
 Pinup.SetPinAtSelf = function()
