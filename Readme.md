@@ -4,13 +4,15 @@ A small addon to let you use `/way` commands without TomTom or any other addons.
 
 **Not compatible with WoW Classic.**
 
-## Installation
+## Installing
 
- Pinup is installed like every other World of Warcraft mod. Extract the contents of the zip file to World of Warcraft's AddOns folder, generally located in one of these places:
+Pinup is installed like any other World of Warcraft addon. If you're not using a tool to manage your addons, extract the Pinup folder from the zip file to your addons folder, which will be in a location like one of these:
 
-* C:\Users\Public\Games\World of Warcraft\\\_retail_\Interface\AddOns
-* C:\Program Files\World of Warcraft\\\_retail_\Interface\AddOns
-* C:\Program Files (x86)\World of Warcraft\\\_retail_\Interface\AddOns
+```
+C:\Users\Public\Games\World of Warcraft\_retail_\Interface\AddOns
+C:\Program Files\World of Warcraft\_retail_\Interface\AddOns
+C:\Program Files (x86)\World of Warcraft\_retail_\Interface\AddOns
+```
 
 ## Usage
 
@@ -51,6 +53,6 @@ I'm not planning on adding a lot of features to this addon, but if you find some
 * Special thanks to Gardios for the addon's name.
 
 ---
-by Vger-Azjol-Nerub—www.vgermods.com
+by Vger-Azjol-Nerub—[www.vgermods.com](https://www.vgermods.com)
 
-© 2020-2026 Travis Spomer.  This mod is released under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) license.
+© 2020-2026 Travis Spomer. This mod is released under the Creative Commons [Attribution-NonCommercial-NoDerivs 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0) license. By using the mod you agree to the terms of the license.
